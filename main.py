@@ -3,7 +3,7 @@ from window import MainWindow
 from display import Display
 from info import Info
 from PySide6.QtWidgets import QApplication, QLabel
-from buttons import Button
+from buttons import Button, ButtonsGrid
 # from styles import setupTheme
  
 if __name__ == '__main__':
@@ -13,16 +13,17 @@ if __name__ == '__main__':
 
     # Info
     info = Info('2.0 ^ 10.0 = 1024')
-    window.addToVLayout(info)
+    window.addToWidgetVLayout(info)
 
     # Display
     display = Display()
-    window.addToVLayout(display)
+    window.addToWidgetVLayout(display)
 
-    button = Button('Texto do botão')
-    window.addToVLayout(button)
-    button2 = Button('Texto do botão')
-    window.addToVLayout(button2)
+    # Grid
+    buttonsgrid = ButtonsGrid(display)
+    window.vLayout.addLayout(buttonsgrid)
+
+
 
     # Executa tudo
     window.adjustFixedSize()
