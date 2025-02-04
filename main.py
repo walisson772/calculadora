@@ -1,5 +1,5 @@
 import sys
-from window import MainWindow
+from window import Window
 from display import Display
 from info import Info
 from PySide6.QtWidgets import QApplication, QLabel
@@ -9,7 +9,7 @@ from buttons import Button, ButtonsGrid
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     # setupTheme()
-    window = MainWindow()
+    window = Window()
 
     # Info
     info = Info('2.0 ^ 10.0 = 1024')
