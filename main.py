@@ -20,7 +20,7 @@ if __name__ == '__main__':
     window.addToWidgetVLayout(display)
 
     # Grid
-    buttonsgrid = ButtonsGrid(display, info)
+    buttonsgrid = ButtonsGrid(display, info, window)
     window.vLayout.addLayout(buttonsgrid)
 
 
